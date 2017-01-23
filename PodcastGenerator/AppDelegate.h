@@ -7,8 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+#import "MainViewController.h"
+@interface AppDelegate : NSObject <NSApplicationDelegate>{
+    NSUserDefaults *userdefaults;
+}
 
 
 @end
