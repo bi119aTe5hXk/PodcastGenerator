@@ -22,7 +22,6 @@
     if ([info count] <= 0  || [items count] <= 0) {
         return nil;
     }
-    //NSString* fileName = @"sample.xml";
     
     NSXMLElement* rss = [NSXMLNode elementWithName:@"rss"];
     NSXMLDocument* xmlDoc = [[NSXMLDocument alloc] initWithRootElement:rss];
@@ -31,7 +30,6 @@
     [rss addAttribute:[NSXMLNode attributeWithName:@"version" stringValue:@"2.0"]];
     [rss addAttribute:[NSXMLNode attributeWithName:@"xmlns:itunes" stringValue:@"http://www.itunes.com/dtds/podcast-1.0.dtd"]];
     
-    //[rss addChild:[NSXMLNode commentWithStringValue:@"Person List"]];
     //channel
     NSXMLElement *channel = [NSXMLNode elementWithName:@"channel"];
     
@@ -78,26 +76,11 @@
         [channel addChild:item];
     }
     
-    
-    
-    
     [rss addChild:channel];
     
     
-    
-    //
-    //
     NSLog(@"%@",xmlDoc);
     
-    //NSURL* fileUrl = [NSURL fileURLWithPath:fileName];
-    //NSError* error = nil;
-    //    NSXMLDocument* xmlDoc1 =
-    //    [[NSXMLDocument alloc] initWithContentsOfURL:fileUrl
-    //                                         options:(NSXMLNodePreserveWhitespace|NSXMLNodePreserveCDATA)
-    //                                           error:&error];
-    
-    //NSString* xmlDisplay = [xmlDoc1 description];
-    //NSLog(@"%@", xmlDisplay);
     return xmlDoc;
 }
 -(void)saveXML:(NSXMLDocument*)xml fileinPath:(NSString*)path{

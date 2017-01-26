@@ -19,7 +19,6 @@
     [super viewDidLoad];
     // Do view setup here.
     userdefaults = [NSUserDefaults standardUserDefaults];
-    //filepath = [userdefaults valueForKey:@"filepath"];
     
     [self.tableView setTarget:self];
     //[self updatexml];
