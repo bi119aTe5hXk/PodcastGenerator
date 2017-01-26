@@ -129,8 +129,13 @@
         }else if([[filename pathExtension] isEqualToString:@"epub"]){
             filetype = @"document/x-epub";
         }
-        NSString *filepath1 = [NSString stringWithFormat:@"%@/%@",filepath,filename];
-        NSInteger filesize = [[FileHelper alloc] filesizeWithPath:filepath1];
+        NSString *filepathfull = [NSString stringWithFormat:@"%@/%@",filepath,filename];
+        NSInteger filesize = [[FileHelper alloc] filesizeWithPath:filepathfull];
+        NSDate *date = [[FileHelper alloc] fileAddedDateWithPath:filepathfull];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; // maybe there exist a new-method now
+        dateFormatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss Z"; //RFC2822-Format
+        NSString *dateString = [dateFormatter stringFromDate:date];
+        
         NSDictionary *detail = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [NSString stringWithFormat:@"%ld",(long)filesize],@"length",
                                 filetype,@"type",
@@ -143,6 +148,7 @@
                   [NSDictionary dictionaryWithObjectsAndKeys:detail,@"detail", nil],@"enclosure",
                   isECstr,@"itunes:explicit",
                   fileurl,@"guid",
+                  dateString,@"pubDate",
                   nil]];
     }
     
@@ -150,8 +156,8 @@
     
     [[PCXMLGen alloc] saveXML:xmldoc fileinPath:xmlfilepath];
     
-    
-    
+    NSDate *nowdate = [NSDate date];
+    [self.updatelabel setStringValue:[NSString stringWithFormat:@"%@",nowdate]];
     
     
     
@@ -165,6 +171,7 @@
     //NSDictionary *dictionary = [fileslist objectAtIndex:row];
     NSString *identifier = [tableColumn identifier];
     NSTableCellView *cellView = [[NSTableCellView alloc] init];
+    NSString *filename = [fileslist1 objectAtIndex:row];
     
     if ([identifier isEqualToString:@"CountCell"]) {
         cellView = [tableView makeViewWithIdentifier:identifier owner:self];
@@ -174,11 +181,15 @@
         
     }else if ([identifier isEqualToString:@"TimeCell"]) {
         cellView = [tableView makeViewWithIdentifier:identifier owner:self];
-        cellView.textField.stringValue = @"time";
+        NSString *filepathfull = [NSString stringWithFormat:@"%@/%@",filepath,filename];
+        NSDate *date = [[FileHelper alloc] fileAddedDateWithPath:filepathfull];
+        
+        
+        cellView.textField.stringValue = [NSString stringWithFormat:@"%@",date];
         return cellView;
     }else if ([identifier isEqualToString:@"TitleCell"]) {
         cellView = [tableView makeViewWithIdentifier:identifier owner:self];
-        cellView.textField.stringValue = [fileslist1 objectAtIndex:row];
+        cellView.textField.stringValue = filename;
         return cellView;
     }else {
         NSLog(@"Unhandled table column identifier %@", identifier);

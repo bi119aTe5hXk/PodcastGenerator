@@ -33,4 +33,6 @@
 
 
 -(NSInteger)filesizeWithPath:(NSString*)path;
+-(NSDate*)fileModifiedDateWithPath:(NSString*)path;
+-(NSDate*)fileAddedDateWithPath:(NSString*)path;
 @end

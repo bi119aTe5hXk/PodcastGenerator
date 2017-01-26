@@ -99,4 +99,12 @@
     return fileSize;
     
 }
+-(NSDate*)fileModifiedDateWithPath:(NSString*)path{
+    NSDate *date = [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileModificationDate];
+    return date;
+}
+-(NSDate*)fileAddedDateWithPath:(NSString*)path{
+    NSDate *date = [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileCreationDate];
+    return date;
+}
 @end
