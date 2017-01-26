@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreMedia/CoreMedia.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface FileHelper : NSObject
 /* tmp */
@@ -35,4 +37,5 @@
 -(NSInteger)filesizeWithPath:(NSString*)path;
 -(NSDate*)fileModifiedDateWithPath:(NSString*)path;
 -(NSDate*)fileAddedDateWithPath:(NSString*)path;
+-(NSString*)mediaFileDurationWtihPath:(NSString*)path;
 @end

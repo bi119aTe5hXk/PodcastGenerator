@@ -107,4 +107,13 @@
     NSDate *date = [[[NSFileManager defaultManager] attributesOfItemAtPath:path error:nil] fileCreationDate];
     return date;
 }
+-(NSString*)mediaFileDurationWtihPath:(NSString*)path{
+    NSURL *filepathurl = [NSURL fileURLWithPath:[path stringByExpandingTildeInPath]];
+    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:filepathurl options:nil];
+    CMTime audioDuration = audioAsset.duration;
+    int audioDurationSeconds = CMTimeGetSeconds(audioDuration);
+    int seconds = audioDurationSeconds % 60;
+    int minutes = (audioDurationSeconds / 60) % 60;
+    return [NSString stringWithFormat:@"%d:%d",minutes,seconds];
+}
 @end

@@ -129,12 +129,18 @@
         }else if([[filename pathExtension] isEqualToString:@"epub"]){
             filetype = @"document/x-epub";
         }
+        
         NSString *filepathfull = [NSString stringWithFormat:@"%@/%@",filepath,filename];
         NSInteger filesize = [[FileHelper alloc] filesizeWithPath:filepathfull];
         NSDate *date = [[FileHelper alloc] fileAddedDateWithPath:filepathfull];
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init]; // maybe there exist a new-method now
         dateFormatter.dateFormat = @"EEE, dd MMM yyyy HH:mm:ss Z"; //RFC2822-Format
         NSString *dateString = [dateFormatter stringFromDate:date];
+        NSString *duration = @"";
+        if (![filetype  isEqual: @"pdf"] || ![filetype  isEqual: @"epub"]) {
+            duration = [[FileHelper alloc] mediaFileDurationWtihPath:filepathfull];
+        }
+        
         
         NSDictionary *detail = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [NSString stringWithFormat:@"%ld",(long)filesize],@"length",
@@ -149,6 +155,7 @@
                   isECstr,@"itunes:explicit",
                   fileurl,@"guid",
                   dateString,@"pubDate",
+                  duration,@"itunes:duration",
                   nil]];
     }
     
