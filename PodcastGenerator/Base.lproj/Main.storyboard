@@ -42,10 +42,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vle-0d-3wl">
-                                            <rect key="frame" x="113" y="122" width="230" height="0.0"/>
+                                            <rect key="frame" x="113" y="122" width="230" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="vWp-XY-K5J">
+                                            <pathCell key="cell" selectable="YES" editable="YES" alignment="left" placeholderString="" id="vWp-XY-K5J">
                                                 <font key="font" metaFont="system"/>
+                                                <url key="url" string="file:///"/>
                                                 <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
                                             </pathCell>
                                         </pathControl>
@@ -61,10 +62,11 @@
                                             </connections>
                                         </button>
                                         <pathControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSd-B3-3kh">
-                                            <rect key="frame" x="113" y="86" width="230" height="0.0"/>
+                                            <rect key="frame" x="113" y="86" width="230" height="22"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <pathCell key="cell" selectable="YES" editable="YES" alignment="left" id="AX0-C3-U3B">
                                                 <font key="font" metaFont="system"/>
+                                                <url key="url" string="file:///"/>
                                                 <color key="backgroundColor" red="0.89803921568627454" green="0.92549019607843142" blue="0.97254901960784312" alpha="1" colorSpace="deviceRGB"/>
                                             </pathCell>
                                         </pathControl>
@@ -1231,7 +1233,7 @@
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Tf-Bt-Qec">
                                 <rect key="frame" x="203" y="295" width="195" height="17"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0000-00-00 00:00" id="8Wc-Il-8eX">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Please press refresh button." id="8Wc-Il-8eX">
                                     <dateFormatter key="formatter" dateStyle="long" timeStyle="long" doesRelativeDateFormatting="YES" id="rN7-hW-sT7"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
