@@ -16,6 +16,7 @@
 		47C427931DE1E5E00027180A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47C427911DE1E5E00027180A /* Main.storyboard */; };
 		47C4279C1DFC4F0C0027180A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C4279B1DFC4F0C0027180A /* MainViewController.m */; };
 		47C4279F1DFC503B0027180A /* PreferenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C4279E1DFC503B0027180A /* PreferenceViewController.m */; };
+		47C7B2F71EA070F300A05775 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = 47C7B2F61EA070F300A05775 /* categories.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		47C4279B1DFC4F0C0027180A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		47C4279D1DFC503B0027180A /* PreferenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceViewController.h; sourceTree = "<group>"; };
 		47C4279E1DFC503B0027180A /* PreferenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceViewController.m; sourceTree = "<group>"; };
+		47C7B2F61EA070F300A05775 /* categories.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = categories.json; path = "../../../../Downloads/4fbec43bcffd783060de-d8428f18604cb94dc71b3a5133ad4da3fb01dbd5/categories.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				47C4278F1DE1E5E00027180A /* Assets.xcassets */,
 				47C427911DE1E5E00027180A /* Main.storyboard */,
 				47C427941DE1E5E00027180A /* Info.plist */,
+				47C7B2F61EA070F300A05775 /* categories.json */,
 				47C427891DE1E5E00027180A /* Supporting Files */,
 			);
 			path = PodcastGenerator;
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47C427901DE1E5E00027180A /* Assets.xcassets in Resources */,
+				47C7B2F71EA070F300A05775 /* categories.json in Resources */,
 				47C427931DE1E5E00027180A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

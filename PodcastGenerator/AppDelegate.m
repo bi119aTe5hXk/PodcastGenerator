@@ -25,12 +25,19 @@
     return YES;
 }
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    NSLog(@"Init...");
+    NSLog(@" _____       _             _   _____                     _           ");
+    NSLog(@"|  _  |___ _| |___ ___ ___| |_|   __|___ ___ ___ ___ ___| |_ ___ ___ ");
+    NSLog(@"|   __| . | . |  _| .'|_ -|  _|  |  | -_|   | -_|  _| .'|  _| . |  _|");
+    NSLog(@"|__|  |___|___|___|__,|___|_| |_____|___|_|_|___|_| |__,|_| |___|_|  ");
+    NSLog(@"Product by ©bi119aTe5hXk 2016-2017.");
+    
     // Insert code here to initialize your application
     userdefaults = [NSUserDefaults standardUserDefaults];
     
     
     
-    
+    //basic
     [userdefaults registerDefaults:[NSDictionary dictionaryWithObjectsAndKeys:@"", @"filepath",
                                     @"", @"xmlfilepath",
                                     @"", @"urlheader",

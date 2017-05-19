@@ -2,8 +2,8 @@
 //  FileHelper.m
 //  PodcastGenerator
 //
-//  Created by bi119aTe5hXk on 2017/01/17.
-//  Copyright © 2017 HT&L. All rights reserved.
+//  Copied & Edited bi119aTe5hXk on 2017/01/17.
+//  NO Copyright © 2017 HT&L. All rights not reserved.
 //
 
 #import "FileHelper.h"
