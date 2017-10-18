@@ -3,7 +3,7 @@
 //  PodcastGenerator
 //
 //  Created by bi119aTe5hXk on 2016/11/20.
-//  Copyright © 2016 HT&L. All rights reserved.
+//  Copyright © 2016 bi119aTe5hXk. All rights reserved.
 //
 
 #import "AppDelegate.h"

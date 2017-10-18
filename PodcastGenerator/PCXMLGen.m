@@ -3,7 +3,7 @@
 //  PodcastGenerator
 //
 //  Created by bi119aTe5hXk on 2017/01/11.
-//  Copyright © 2017 HT&L. All rights reserved.
+//  Copyright © 2017 bi119aTe5hXk. All rights reserved.
 //
 
 //https://help.apple.com/itc/podcasts_connect/#/itcb54353390

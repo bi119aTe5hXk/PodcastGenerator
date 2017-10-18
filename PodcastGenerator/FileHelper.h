@@ -3,7 +3,7 @@
 //  PodcastGenerator
 //
 //  Copied & Edited by bi119aTe5hXk on 2017/01/17.
-//  NO Copyright © 2017 HT&L. All rights not reserved.
+//  NO Copyright © 2017 bi119aTe5hXk. All rights not reserved.
 //
 
 #import <Foundation/Foundation.h>
